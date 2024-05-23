@@ -1,9 +1,9 @@
 terraform {
   required_version = ">=0.12.0"
   backend "s3" {
-    key     = "terraformstatefile"
-    bucket = "fusisoft-terraform-backend-bucket"
+    key     = "dev/terraformstatefile"
+    bucket = "bootcamp34-nnamdi"
     region = "us-west-2"
-    dynamodb_table = "terraform-state-locking"
+    dynamodb_table = "for_terraform_locking"
   }
 }

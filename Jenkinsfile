@@ -3,9 +3,11 @@ pipeline {
     parameters {
                 choice(name: 'deploy_choice', choices:['apply','destroy'],description:'The deployment type')
                   }
+    /*
     environment {
         EMAIL_TO = 'fusisoft@gmail.com'
     }
+    */
     stages {
         stage('1.Terraform init') {
             steps {
@@ -39,6 +41,7 @@ pipeline {
                 sh "AWS_REGION=us-west-2 terraform ${params.deploy_choice} --auto-approve"
             }
                 }
+        /*
         stage ('5. Email Notification') {
             steps {
                mail bcc: 'fusisoft@gmail.com', body: '''Terraform deployment is completed.
@@ -49,5 +52,7 @@ pipeline {
                           
                }    
           }
+     */
+     
      }       
 }   
