@@ -60,7 +60,8 @@ module "eks" {
 
 
 
-  # aws-auth configmap
+  /*
+# aws-auth configmap
   manage_aws_auth_configmap = true
   #create_aws_auth_configmap = true
 
@@ -71,6 +72,7 @@ module "eks" {
       groups   = ["system:masters"]
     },
   ]
+*/
 
   tags = {
     env       = "dev"
